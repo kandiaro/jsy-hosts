@@ -10,13 +10,13 @@
 ## Overview
 
 This is a simple puppet module to manage hosts file. You provide the IP, Host and Alias as a hash value and it will update /etc/hosts by default.
-Alternatively you can also provide a file location.  
+Alternatively you can also provide a file location. 
 
 
 ## Usage
 
 
-Provide one or mulitple entries like below.
+Provide one or mulitple entries like below. If you have multiple hostnames or aliases then separate each with a space. 
 
 ```puppet
 class {'hosts':
@@ -30,6 +30,16 @@ class {'hosts':
          file => '/root/somefile',
 	 hosts = {entry1 => {ip=>'127.0.0.1',host=>'localhost',alias=>'localdomain'},
 	 	  entry2 => {ip=>'127.0.0.1',host=>'',alias=>'localdomain'}
+	 	 }
+      }
+```
+
+Provide more than one hostname or alias as a space separated list.
+```puppet
+class {'hosts':
+         file => '/root/somefile',
+	 hosts = {entry1 => {ip=>'127.0.0.1',host=>'localhost localhost.localdomain',alias=>'localdomain'},
+	 	  entry2 => {ip=>'127.0.0.1',host=>'',alias=>'localdomain loopback'}
 	 	 }
       }
 ```
