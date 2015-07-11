@@ -18,10 +18,11 @@ Alternatively you can also provide a file location.
 
 Provide one or mulitple entries like below.
 
+```puppet
 class {'hosts':
          hosts = {entry1 = {ip='127.0.0.1',host=>'localhost',alias=>'localdomain'}},
       }
-
+```
 
 You may also provide the path to the file that will be updated.
 ```puppet
