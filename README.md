@@ -20,7 +20,7 @@ Provide one or mulitple entries like below.
 
 ```puppet
 class {'hosts':
-         hosts = {entry1 = {ip='127.0.0.1',host=>'localhost',alias=>'localdomain'}},
+         hosts = {entry1 => {ip=>'127.0.0.1',host=>'localhost',alias=>'localdomain'}},
       }
 ```
 
