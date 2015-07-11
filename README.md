@@ -24,14 +24,14 @@ class {'hosts':
 
 
 You may also provide the path to the file that will be updated.
-
+```puppet
 class {'hosts':
          file => '/root/somefile',
 	 hosts = {entry1 => {ip=>'127.0.0.1',host=>'localhost',alias=>'localdomain'},
 	 	  entry2 => {ip=>'127.0.0.1',host=>'',alias=>'localdomain'}
 	 	 }
       }
-
+```
 
 ## Validations
 
