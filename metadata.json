@@ -1,9 +1,9 @@
 {
   "name": "jsy-hosts",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "author": "jsy",
   "summary": "A simple puppet module to manage hosts file",
-  "license": "Apache 2.0",
+  "license": "Apache-2.0",
   "source": "git://github.com/kandiaro/jsy-hosts",
   "project_page": "https://github.com/kandiaro/jsy-hosts",
   "issues_url": "https://github.com/kandiaro/jsy-hosts/issues",
