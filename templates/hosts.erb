@@ -1,6 +1,6 @@
-<%hosts.each do |key,value|-%>
-<%if not value['ip'].empty?-%>
-<%if not value['host'].empty? && value['alias'].empty?-%>
+<%- hosts.each do |key,value| -%>
+<%- if not value['ip'].empty? -%>
+<%- if not value['host'].empty? && value['alias'].empty? -%>
 <%=value['ip']+"\t\t"-%> <%= value['host']+"\t" %> <%= value['alias']%>
 <% end -%>
 <% end -%>

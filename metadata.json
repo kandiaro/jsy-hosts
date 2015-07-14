@@ -1,6 +1,6 @@
 {
   "name": "jsy-hosts",
-  "version": "0.1.9",
+  "version": "0.2.0",
   "author": "jsy",
   "summary": "A simple puppet module to manage hosts file",
   "license": "Apache 2.0",
