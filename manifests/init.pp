@@ -3,10 +3,9 @@
 # Junaid Syed <junaid@kandiaro.net>
 #
 # === 
-
 class hosts(
   $file = $hosts::params::file,
-  $hosts = {entry => {ip => '127.0.0.0',host => 'localhost localhost.localdomain',alias => 'localdomain'}}		
+  $hosts = {entry => {ip => '127.0.0.0',host => 'localhost localhost.localdomain',alias => 'localdomain'}}
 ) inherits hosts::params {
   validate_hash($hosts)
   file{$file:

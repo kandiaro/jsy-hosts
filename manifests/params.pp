@@ -1,5 +1,3 @@
 class hosts::params {
-
-$file='/etc/hosts'
-
+  $file='/etc/hosts'
 }
