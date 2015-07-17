@@ -20,7 +20,7 @@ Provide one or mulitple entries like below. If you have multiple hostnames or al
 
 ```puppet
 class {'hosts':
-         hosts = {entry1 => {ip=>'127.0.0.1',host=>'localhost',alias=>'localdomain'}},
+         hosts => {entry1 => {ip=>'127.0.0.1',host=>'localhost',alias=>'localdomain'}},
       }
 ```
 
@@ -28,7 +28,7 @@ You may also provide the path to the file that will be updated.
 ```puppet
 class {'hosts':
          file => '/root/somefile',
-	 hosts = {entry1 => {ip=>'127.0.0.1',host=>'localhost',alias=>'localdomain'},
+	 hosts => {entry1 => {ip=>'127.0.0.1',host=>'localhost',alias=>'localdomain'},
 	 	  entry2 => {ip=>'127.0.0.1',host=>'',alias=>'localdomain'}
 	 	 }
       }
@@ -38,9 +38,29 @@ Provide more than one hostname or alias as a space separated list.
 ```puppet
 class {'hosts':
          file => '/root/somefile',
-	 hosts = {entry1 => {ip=>'127.0.0.1',host=>'localhost localhost.localdomain',alias=>'localdomain'},
+	 hosts => {entry1 => {ip=>'127.0.0.1',host=>'localhost localhost.localdomain',alias=>'localdomain'},
 	 	  entry2 => {ip=>'127.0.0.1',host=>'',alias=>'localdomain loopback'}
 	 	 }
+      }
+
+```
+
+Hiera Example
+
+```puppet
+hosts:
+  entry1:
+    ip: 127.0.0.1
+    host: localhost.localdomain
+    alias: localdomain loopback
+```
+
+Using Hiera
+
+```puppet
+class {'hosts':
+         file => '/root/somefile',
+         hosts => hiera("hosts")
       }
 ```
 
